@@ -1,0 +1,34 @@
+[
+	{
+		"name": "acm.hack",
+		"url": "hack"
+	},
+	{
+		"name": "acm.ai",
+		"url": "ai"
+	},
+	{
+		"name": "acm.w",
+		"url": "w"
+	},
+	{
+		"name": "acm.teachLA",
+		"url": "teachla"
+	},
+	{
+		"name": "acm.cyber",
+		"url": "cyber"
+	},
+	{
+		"name": "acm.design",
+		"url": "design"
+	},
+	{
+		"name": "acm.studio",
+		"url": "studio"
+	},
+	{
+		"name": "acm.icpc",
+		"url": "icpc"
+	}
+]

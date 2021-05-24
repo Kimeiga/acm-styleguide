@@ -1,0 +1,105 @@
+---
+title: Giffleball
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Kimeiga/westwood-css@latest/css/acm.css">
+	<style>
+		/* .card:hover {
+			box-shadow: 0px 38px 50px -10px rgba(42, 66, 83, 0.16);
+
+			box-shadow: 0px 0px 65px 0px rgba(25, 31, 32, 0.07);
+
+		} */
+
+		.card {
+			height: 310px;
+			white-space: normal;
+		}
+	</style>
+
+</head>
+
+<body>
+	{% include navbar.liquid %}
+
+	<section class="hero is-large">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+
+				<h1 class="title is-1 mb-6">
+					ACM Styleguide
+				</h1>
+				<p class="subtitle">
+					ACM Styleguide is the one-stop location to know everything about our branding.
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="container">
+
+		<div class="columns is-multiline">
+
+			<div class="column is-half p-4">
+				<a href="guidelines">
+					<div class="card block">
+						<div class="card-content">
+							<div class="content p-4">
+								<p class="subtitle is-4">First time?<br>
+									Read the <u>Guidelines</u> <b>⊖</b>
+								</p>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="column is-half p-4">
+				<!-- <code>{{ name }}</code> -->
+				<a href="committee/acm.html">
+
+					<div
+						class="card block has-background-light is-shadowless is-align-items-center is-flex is-justify-content-center">
+						<div class="card-content has-text-centered">
+							<div class="content">
+								<!-- <h1 class="title">{{ committee.name }}</h1> -->
+								<img src="/assets/logos/acm/acm-wordmark-dark.png" alt="logo" style="height: 70px;">
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			{% for committee in acm %}
+			<div class="column is-one-quarter p-4">
+				<!-- <code>{{ name }}</code> -->
+				<a href="committee/{{committee.url}}">
+
+					<div
+						class="card block has-background-light is-shadowless is-align-items-center is-flex is-justify-content-center">
+						<div class="card-content has-text-centered">
+							<div class="content">
+								<!-- <h1 class="title">{{ committee.name }}</h1> -->
+								<img src="/assets/logos/{{ committee.url }}/{{ committee.url }}-wordmark-dark-gradient.png" alt="logo"
+									style="height: 55px;">
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+</body>
+
+</html>
